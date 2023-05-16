@@ -1,13 +1,15 @@
-# Documentación Laravel
+# Enlaces Documentación
+
+## Documentación Laravel
   + https://laravel.com/docs/10.x
 
-# Laravel Breeze
+## Laravel Breeze
   + https://laravel.com/docs/10.x/starter-kits
   
-# Laravel Blueprint
+## Laravel Blueprint
   + https://blueprint.laravelshift.com/
   
-# Livewire
+## Livewire
   + https://laravel-livewire.com/docs/2.x/quickstart
 
 
