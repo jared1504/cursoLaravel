@@ -1,0 +1,19 @@
+models:
+    Project:
+        name: string 
+        description: text 
+        status: boolean 
+        user_id: id foreign
+        relationships:
+            belongsTo: User
+    Task:
+        name: string 
+        status: boolean 
+        priority: integer
+        project_id: id foreign
+seeders: Project, Task
+controllers:
+    Project:
+        resource: web
+    Task:
+        resource: web
