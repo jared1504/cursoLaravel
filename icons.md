@@ -8,7 +8,7 @@
                     fill-rule="nonzero" />
   
 </svg>
- ```html
+ ```
 # icon eliminar
  <svg class="w-8 h-8 hover:w-9 hover:h-9 fill-current text-red-900" clip-rule="evenodd"
                                     fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
