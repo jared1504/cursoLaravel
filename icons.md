@@ -1,14 +1,16 @@
 # icon más
-+ <svg class="my-auto w-14 h-14 hover:w-16 hover:h-16 fill-current text-blue-900" clip-rule="evenodd"
+```html
+ <svg class="my-auto w-14 h-14 hover:w-16 hover:h-16 fill-current text-blue-900" clip-rule="evenodd"
                 fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="m12.002 2c5.518 0 9.998 4.48 9.998 9.998 0 5.517-4.48 9.997-9.998 9.997-5.517 0-9.997-4.48-9.997-9.997 0-5.518 4.48-9.998 9.997-9.998zm0 1.5c-4.69 0-8.497 3.808-8.497 8.498s3.807 8.497 8.497 8.497 8.498-3.807 8.498-8.497-3.808-8.498-8.498-8.498zm-.747 7.75h-3.5c-.414 0-.75.336-.75.75s.336.75.75.75h3.5v3.5c0 .414.336.75.75.75s.75-.336.75-.75v-3.5h3.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-3.5v-3.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75z"
                     fill-rule="nonzero" />
+  
 </svg>
-
+ ```html
 # icon eliminar
- + <svg class="w-8 h-8 hover:w-9 hover:h-9 fill-current text-red-900" clip-rule="evenodd"
+ <svg class="w-8 h-8 hover:w-9 hover:h-9 fill-current text-red-900" clip-rule="evenodd"
                                     fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -17,7 +19,7 @@
                                 </svg>
                                
 # icon editar
-+ <svg class="w-8 h-8 hover:w-9 hover:h-9 fill-current text-blue-900" clip-rule="evenodd"
+<svg class="w-8 h-8 hover:w-9 hover:h-9 fill-current text-blue-900" clip-rule="evenodd"
                                 fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -26,7 +28,7 @@
                             </svg>
                             
 # icon mostrar
- + <svg class="w-8 h-8 hover:w-9 hover:h-9 fill-current text-green-900" clip-rule="evenodd"
+ <svg class="w-8 h-8 hover:w-9 hover:h-9 fill-current text-green-900" clip-rule="evenodd"
                                 fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -35,7 +37,7 @@
                             </svg>
                             
 # icon check vacio
-+ <svg class="w-10 h-10 hover:w-12 hover:h-12  fill-current text-green-900" clip-rule="evenodd"
+ <svg class="w-10 h-10 hover:w-12 hover:h-12  fill-current text-green-900" clip-rule="evenodd"
                         fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -44,7 +46,7 @@
                     </svg>
                     
 # icon check verificado
-+ <svg class="w-10 h-10 hover:w-12 hover:h-12  fill-current text-green-900"
+ <svg class="w-10 h-10 hover:w-12 hover:h-12  fill-current text-green-900"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M20 12.194v9.806h-20v-20h18.272l-1.951 2h-14.321v16h16v-5.768l2-2.038zm.904-10.027l-9.404 9.639-4.405-4.176-3.095 3.097 7.5 7.273 12.5-12.737-3.096-3.096z" />
