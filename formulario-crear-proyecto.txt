@@ -8,7 +8,7 @@
     @endif
 
     <form 
-        class='my-2 p-5  w-3/4 mx-auto  rounded-lg bg-white drop-shadow-2xl' 
+        class='my-2  w-3/4 mx-auto' 
         action="{{ route('project.store') }}"
         method="POST"
         >
