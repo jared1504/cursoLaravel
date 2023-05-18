@@ -1,0 +1,17 @@
+ //validar inputs
+        $this->validate($request, [
+            'name' => 'required|max:30',
+            'description' => 'required',
+        ]);
+
+        //crear el proyecto
+        $project = new Project();
+        $project->name = $request->name;
+        $project->description = $request->description;
+        $project->status = false;
+        $project->user_id = Auth::user()->id; //asignarlo al usuario autenticado
+        $project->save();
+
+        $request->session()->flash('message', 'Proyecto agregado con éxito'); //mandar mensaje para mostrarlo en pantalla
+
+        return redirect()->route('dashboard');
