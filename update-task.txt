@@ -1,0 +1,22 @@
+ $task->status = !$task->status;
+        $task->save();
+
+        $project = Project::find($task->project_id);
+        $i = 0;
+        
+        //verificar si hay tareas completadas
+        foreach ($project->tasks as $task) {
+            if (!$task->status) {
+                $i++;
+            }
+        }
+
+        if ($i == 0) { //todas las tareas estan completadas
+            $project->status = true;
+        } else { //hay tareas pendientes
+          $project->status = false;
+        }
+          
+        $project->save();
+
+        return redirect()->route('project.show', $task->project);
