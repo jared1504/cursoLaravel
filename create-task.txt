@@ -1,0 +1,21 @@
+//validar inputs
+        $this->validate($request, [
+            'name' => 'required|max:30',
+            'priority' => 'required|numeric',
+        ]);
+
+        //crear el proyecto
+        $task = new Task();
+        $task->name = $request->name;
+        $task->priority = $request->priority;
+        $task->status = 0;
+        $task->project_id = $request->project_id; //asignarla al projecto
+        $task->save();
+
+        $project = Project::find($task->project_id);
+        $project->status = 0;
+        $project->save();
+
+        $request->session()->flash('message', 'Tarea agregada con éxito'); //mandar mensaje para mostrarlo en pantalla
+
+        return redirect()->route('project.show', $task->project);
