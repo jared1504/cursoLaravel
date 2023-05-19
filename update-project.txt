@@ -1,0 +1,14 @@
+//validar inputs
+        $this->validate($request, [
+            'name' => 'required|max:30',
+            'description' => 'required',
+        ]);
+
+        //actualizar el proyecto
+        $project->name = $request->name;
+        $project->description = $request->description;
+        $project->save();
+
+        $request->session()->flash('message', 'Proyecto actualizado con éxito'); //mandar mensaje para mostrarlo en pantalla
+
+        return redirect()->route('dashboard');
