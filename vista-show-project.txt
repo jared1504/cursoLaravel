@@ -1,0 +1,44 @@
+<div class=" flex justify-between mb-5">
+        <div class="">
+            <h1 class="text-5xl text-blue-900 font-black">{{ $project->name }}</h1>
+            <p class="mt-1 text-lg">{{ $project->description }}</p>
+        </div>
+        <a class="my-auto" href="{{ route('task.create', $project) }}">
+            <svg class="my-auto w-14 h-14 hover:w-16 hover:h-16 fill-current text-blue-900" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m12.002 2c5.518 0 9.998 4.48 9.998 9.998 0 5.517-4.48 9.997-9.998 9.997-5.517 0-9.997-4.48-9.997-9.997 0-5.518 4.48-9.998 9.997-9.998zm0 1.5c-4.69 0-8.497 3.808-8.497 8.498s3.807 8.497 8.497 8.497 8.498-3.807 8.498-8.497-3.808-8.498-8.498-8.498zm-.747 7.75h-3.5c-.414 0-.75.336-.75.75s.336.75.75.75h3.5v3.5c0 .414.336.75.75.75s.75-.336.75-.75v-3.5h3.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-3.5v-3.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75z"
+                    fill-rule="nonzero" />
+            </svg>
+        </a>
+    </div>
+
+
+    @if (session('message'))
+        <div
+            class="mt-5 bg-green-100 py-5 w-full text-center font-bold uppercase text-2xl text-green-700 border-solid border-green-700 border-2">
+            {{ session('message') }}
+        </div>
+    @endif
+    @if ($project->tasks->count() == 0)
+        <p class="text-2xl text-center mt-10">Tu proyecto aún no tiene tareas asignadas, <a
+                href="{{ route('task.create', $project) }}" class="text-blue-700">da
+                click aquí para agregar una.</a></p>
+    @else
+        @if ($pendientes->count() > 0)
+            <h3 class="text-3xl text-blue-900 font-bold">Tareas Pendientes</h3>
+            <div class="mt-4 flex flex-col gap-5 mb-10">
+                @foreach ($pendientes as $task)
+                    <x-task :task="$task" />
+                @endforeach
+            </div>
+        @endif
+        @if ($completadas->count() > 0)
+            <h3 class="text-3xl text-blue-900 font-bold">Tareas Completadas</h3>
+            <div class="mt-4 flex flex-col gap-5">
+                @foreach ($completadas as $task)
+                    <x-task :task="$task" />
+                @endforeach
+            </div>
+        @endif
+    @endif
